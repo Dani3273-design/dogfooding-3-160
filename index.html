@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海上烟花 - 3D交互动画</title>
+    <link rel="stylesheet" href="page/index/app.css">
+</head>
+<body>
+    <div id="app">
+        <div id="mobile-warning" v-if="isMobile">
+            <div class="mobile-content">
+                <div class="mobile-icon">📱</div>
+                <h2>请使用PC浏览器</h2>
+                <p>本页面仅支持PC浏览器访问</p>
+                <p>Please use a PC browser to view this page</p>
+            </div>
+        </div>
+        
+        <div id="canvas-container" ref="canvasContainer"></div>
+        
+        <div id="ui-overlay">
+            <div class="hint" v-if="showHint">点击画面发射烟花</div>
+        </div>
+    </div>
+
+    <script src="lib/vue.global.js"></script>
+    <script src="lib/three.min.js"></script>
+    <script src="page/index/app.js"></script>
+</body>
+</html>
