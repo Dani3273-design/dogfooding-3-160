@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D烟花秀</title>
+    <link rel="stylesheet" href="page/index/index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="mobile-overlay" v-if="isMobile">
+            <div class="icon">🎆</div>
+            <h1>3D烟花秀</h1>
+            <p>抱歉，当前页面仅支持在电脑浏览器上运行。请使用Chrome、Safari等PC浏览器访问以获得最佳3D动画体验。</p>
+        </div>
+        <template v-else>
+            <div class="canvas-container"></div>
+            <div class="hint">点击屏幕发射烟花 ✨</div>
+        </template>
+    </div>
+    <script src="lib/three.min.js"></script>
+    <script src="lib/vue.min.js"></script>
+    <script src="page/index/index.js"></script>
+</body>
+</html>
