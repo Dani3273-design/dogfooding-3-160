@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 烟花秀 - 海滩之夜</title>
+    <script src="lib/vue.global.js"></script>
+    <script src="lib/three.min.js"></script>
+    <link rel="stylesheet" href="page/index/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- PC端内容 -->
+        <div v-if="!isMobile" class="fireworks-container">
+            <canvas id="fireworks-canvas"></canvas>
+            <div class="ui-layer">
+                <div class="title">🎆 海滩烟花秀 🎆</div>
+                <div class="hint">点击屏幕发射烟花 | 连发间隔需大于0.5秒</div>
+                <div class="stats">已发射: {{ fireworkCount }} 枚</div>
+            </div>
+        </div>
+        
+        <!-- 移动端提示 -->
+        <div v-else class="mobile-warning">
+            <div class="mobile-content">
+                <div class="mobile-icon">🖥️</div>
+                <h2>请使用电脑浏览器访问</h2>
+                <p>3D 烟花秀需要鼠标交互</p>
+                <p>请在 PC 端 Chrome 或 Safari 浏览器中打开</p>
+                <div class="mobile-decoration">
+                    <span>✨</span>
+                    <span>🎆</span>
+                    <span>✨</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="page/index/app.js"></script>
+</body>
+</html>
